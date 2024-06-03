@@ -47,18 +47,18 @@ const Login = () => {
  
            <div className=" text-center">
              <p>
-               Login with
+               Login with 
                <span
                  
-                 className="text-green-500 font-bold cursor-pointer hover:underline"
+                 className="text-green-500 font-bold mx-2 cursor-pointer hover:underline"
                >
                  
-                 Google
+                 Google 
                </span>
-               OR
-               <span className="text-purple-500 font-bold cursor-pointer hover:underline">
+                OR 
+               <span className="text-purple-500 font-bold ml-2 cursor-pointer hover:underline">
                  
-                 Github
+                  Github
                </span>
              </p>
            </div>
@@ -67,7 +67,7 @@ const Login = () => {
              <p>
                New here? Please
                <Link
-                 className="text-blue-500 font-bold hover:underline"
+                 className="text-blue-500 font-bold hover:underline ml-2"
                  to="/register"
                >
                  Register
@@ -81,3 +81,4 @@ const Login = () => {
 };
 
 export default Login;
+
