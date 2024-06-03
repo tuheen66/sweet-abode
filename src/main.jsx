@@ -6,18 +6,23 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root/Root.jsx";
 import Home from "./Pages/Home/Home.jsx";
+import Login from "./Pages/Login.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children:[
+    children: [
       {
-        path:"/",
-        element:<Home></Home>,
+        path: "/",
+        element: <Home></Home>,
         loader: () => fetch("./../public/residential.json"),
-      }
-    ]
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+    ],
   },
 ]);
 
@@ -26,4 +31,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
