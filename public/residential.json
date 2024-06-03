@@ -1,0 +1,81 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/mB2fMxc/house-01.jpg",
+      "estate_title": "Modern Family Home",
+      "segment_name": "Family Home",
+      "description": "A beautiful and spacious family home located in the heart of the city. This property features a contemporary design with high-quality finishes, an open-plan living area with large windows that let in plenty of natural light, and a large garden perfect for outdoor activities. The kitchen is fully equipped with modern appliances, and the master bedroom includes an en-suite bathroom with a luxurious bathtub. Additional amenities include a private garage, a home office, and a basement that can be used as a recreation room or additional storage space.",
+      "short_description": "Spacious family home with modern design, large garden, and high-end finishes, located in the city center.",
+      "price": 450000,
+      "status": "sale",
+      "area": 3200,
+      "location": "123 Maple Street, Springfield",
+      "facilities": ["Living Room", "Swimming Pool", "Kitchen", "Garage"]
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/0jctp3Q/house-02.jpg",
+      "estate_title": "Luxury Downtown Apartment",
+      "segment_name": "Apartment",
+      "description": "Experience luxury living in this stunning downtown apartment. With breathtaking views of the city skyline, this apartment offers modern amenities and a spacious layout that is perfect for entertaining. The open-concept living area includes a gourmet kitchen with top-of-the-line appliances, a dining area, and a living room with floor-to-ceiling windows. The master suite features a walk-in closet and a spa-like bathroom with a rain shower and a soaking tub. Residents also have access to a rooftop pool, a state-of-the-art gym, and concierge services, making it easy to enjoy a high-end lifestyle.",
+      "short_description": "Luxury downtown apartment with city views, modern amenities, and a spacious layout, ideal for entertaining.",
+      "price": 600000,
+      "status": "sale",
+      "area": 1800,
+      "location": "456 Oak Avenue, Metropolis",
+      "facilities": ["Living Room", "Rooftop Pool", "Gym", "Concierge Service"]
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/SfdqzG7/house-03.jpg",
+      "estate_title": "Cozy Suburban Cottage",
+      "segment_name": "Cottage",
+      "description": "This charming cottage is located in a quiet suburban neighborhood, offering a peaceful retreat from the hustle and bustle of city life. The property features a cozy living space with a wood-burning fireplace, a well-maintained garden with a patio area, and is close to local amenities such as schools, parks, and shopping centers. The kitchen is updated with stainless steel appliances, and the bedrooms are spacious and filled with natural light. Additional features include a detached garage, a finished attic that can be used as a home office or guest room, and ample storage throughout the house.",
+      "short_description": "Charming suburban cottage with a cozy living space, wood-burning fireplace, and a well-maintained garden.",
+      "price": 250000,
+      "status": "rent",
+      "area": 1400,
+      "location": "789 Pine Lane, Greenville",
+      "facilities": ["Living Room", "Garden", "Fireplace", "Garage"]
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/tLTYq4C/house-04.jpg",
+      "estate_title": "Spacious Country Villa",
+      "segment_name": "Country Villa",
+      "description": "A stunning country villa with extensive grounds and picturesque views. This property boasts a large living area with a grand fireplace, multiple bedrooms with en-suite bathrooms, and luxurious amenities such as a private pool and a tennis court. The kitchen is designed for gourmet cooking with high-end appliances and a large island. The master suite includes a private balcony overlooking the estate, a walk-in closet, and a bathroom with a jacuzzi tub and a steam shower. Outside, the beautifully landscaped gardens feature a gazebo, a BBQ area, and walking trails. This villa offers privacy and tranquility, perfect for those seeking a retreat from city life.",
+      "short_description": "Stunning country villa with extensive grounds, private pool, and luxurious amenities, offering privacy and tranquility.",
+      "price": 850000,
+      "status": "sale",
+      "area": 5000,
+      "location": "1010 Country Road, Pleasantville",
+      "facilities": ["Living Room", "Private Pool", "Tennis Court", "Home Theater"]
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/YjRC9CN/house-05.jpg",
+      "estate_title": "Charming Beachfront Condo",
+      "segment_name": "Beach Condo",
+      "description": "Enjoy beachfront living in this charming condo. Featuring stunning ocean views, modern decor, and access to exclusive amenities like a private beach and swimming pool, this property is ideal for those seeking a relaxing lifestyle. The open-plan living area includes a contemporary kitchen with granite countertops and stainless steel appliances, a dining area, and a living room that opens onto a balcony with panoramic sea views. The master bedroom has an en-suite bathroom and a walk-in closet. Residents can also enjoy a fitness center, a community lounge, and secure parking. This condo offers the perfect blend of luxury and convenience.",
+      "short_description": "Beachfront condo with stunning ocean views, modern decor, and exclusive amenities, perfect for a relaxing lifestyle.",
+      "price": 50000,
+      "status": "rent",
+      "area": 1200,
+      "location": "303 Beachside Drive, Sunny Shores",
+      "facilities": ["Living Room", "Private Beach", "Swimming Pool", "Fitness Center"]
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/TbMTGBq/house-06.jpg",
+      "estate_title": "Elegant City Loft",
+      "segment_name": "City Loft",
+      "description": "An elegant loft in the heart of the city, perfect for modern urban living. This property features high ceilings, large windows that flood the space with natural light, and high-end finishes throughout. The open-plan layout includes a designer kitchen with custom cabinetry and premium appliances, a spacious living area with hardwood floors, and a dining area. The master bedroom has a walk-in closet and an en-suite bathroom with a double vanity and a glass-enclosed shower. Additional amenities include a rooftop terrace with city views, a fitness center, and a secure building with a doorman. This loft offers a sophisticated and stylish living experience.",
+      "short_description": "Elegant city loft with high ceilings, modern finishes, and a rooftop terrace, ideal for urban living.",
+      "price": 700000,
+      "status": "rent",
+      "area": 2000,
+      "location": "789 Central Park Ave, Urbanville",
+      "facilities": ["Living Room", "Gym", "Rooftop Terrace", "Gourmet Kitchen"]
+    }
+  ]
+  
