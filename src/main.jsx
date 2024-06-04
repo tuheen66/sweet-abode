@@ -11,6 +11,7 @@ import Register from "./Pages/Register/Register.jsx";
 import UpdateProfile from "./Pages/UpdateProile/UpdateProfile";
 import PropertyDetails from "./Pages/PropertyDetails/PropertyDetails.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
+import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/property-details/:id",
-        element: <PropertyDetails></PropertyDetails>,
+        element: (
+          <PrivateRoute>
+            <PropertyDetails></PropertyDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("../public/residential.json"),
       },
       {
@@ -37,7 +42,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/update-profile",
-        element: <UpdateProfile></UpdateProfile>,
+        element: (
+          <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoute>
+        ),
       },
     ],
   },

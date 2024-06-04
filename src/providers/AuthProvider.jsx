@@ -19,46 +19,53 @@ const gitHubProvider = new GithubAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   // creating user with email and password
 
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // login with email and password
 
   const loginUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   // google signIn
 
   const googleSignIn = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
   // github sign in
 
   const githubSignIn = () => {
+    setLoading(true);
     return signInWithPopup(auth, gitHubProvider);
   };
 
   // logout
 
   const logOut = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
-
-  useEffect(()=>{
-    onAuthStateChanged(auth, currentUser=>{
-        setUser(currentUser)
-    })
-  },[])
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+  }, []);
 
   const authInfo = {
     user,
+    loading,
     createUser,
     loginUser,
     googleSignIn,
