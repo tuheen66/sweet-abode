@@ -42,7 +42,7 @@ const ExclusiveHouses = () => {
         <img className="shadow-gray-300 shadow-xl rounded-lg" src={img16} alt="" />
       </div> */}
 
-      <div className=" grid lg:grid-cols-4 gap-8 mb-8">
+      <div className=" grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         {houses.map((house, idx)=><img key={idx} className="shadow-gray-300 shadow-xl rounded-lg" src={house} alt="" /> )}
       </div>
     </div>

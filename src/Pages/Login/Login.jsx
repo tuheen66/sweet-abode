@@ -56,7 +56,7 @@ const Login = () => {
   };
 
   return (
-    <div className="hero  lg:w-1/2 mx-auto bg-blue-200 mb-4 rounded-xl ">
+    <div className="hero  lg:w-1/2 mx-auto bg-[#34ace05d] mb-4 rounded-xl ">
       <Helmet>
         <title>Sweet Abode | Login</title>
       </Helmet>
@@ -107,7 +107,7 @@ const Login = () => {
             </div>
           </form>
 
-          <div className=" text-center">
+          <div className="text-center mx-auto">
             <p>
               Login with
               <span

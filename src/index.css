@@ -14,6 +14,11 @@ h4{
     margin-top: 10px;
 }
 
-p{
+.aboutUs p{
     text-align: justify;
+}
+
+.leaflet-container{
+    height:80vh;
+    border-radius:15px
 }

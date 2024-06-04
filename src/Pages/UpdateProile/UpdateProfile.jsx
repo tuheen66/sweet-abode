@@ -39,11 +39,11 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="grid grid-cols-2 w-[90%] mx-auto">
+    <div className="grid lg:grid-cols-2 w-[90%] mx-auto">
       <Helmet>
         <title>Sweet Abode | Update Profile</title>
       </Helmet>
-      <div className="hero min-h-screen bg-blue-200 mb-4 rounded-xl">
+      <div className="hero min-h-screen bg-[#34ace05d] mb-4 rounded-xl">
         <div className="hero-content flex-col w-full">
           <div className="text-center lg:text-left ">
             <h1 className="text-5xl font-bold">Update Profile</h1>
@@ -114,7 +114,7 @@ const UpdateProfile = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center space-y-8">
+      <div className="flex flex-col justify-center items-center space-y-8 mb-8">
         <div className="w-48 rounded-lg">
           <img className="rounded-lg" src={user.photoURL} alt="" />
         </div>
