@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, googleSignIn, githubSignIn } = useContext(AuthContext);
 
   const handleSingIn = (e) => {
     e.preventDefault();
@@ -13,7 +13,29 @@ const Login = () => {
 
     console.log(email, password);
 
+    // email and password sign in
+
     loginUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleGithubSignIn = () => {
+    githubSignIn()
       .then((result) => {
         console.log(result.user);
       })
@@ -68,11 +90,17 @@ const Login = () => {
           <div className=" text-center">
             <p>
               Login with
-              <span className="text-green-500 font-bold mx-2 cursor-pointer hover:underline">
+              <span
+                onClick={handleGoogleSignIn}
+                className="text-green-500 font-bold mx-2 cursor-pointer hover:underline"
+              >
                 Google
               </span>
               OR
-              <span className="text-purple-500 font-bold ml-2 cursor-pointer hover:underline">
+              <span
+                onClick={handleGithubSignIn}
+                className="text-purple-500 font-bold ml-2 cursor-pointer hover:underline"
+              >
                 Github
               </span>
             </p>
