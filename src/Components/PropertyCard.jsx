@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 /* eslint-disable react/prop-types */
 const PropertyCard = ({ property }) => {
@@ -15,8 +17,14 @@ const PropertyCard = ({ property }) => {
     facilities,
   } = property;
 
+  AOS.init();
+
   return (
-    <div className="card card-compact  bg-base-100 shadow-slate-500 shadow-2xl border p-4 transition duration-500 hover:scale-105 ">
+    <div
+      data-aos="slide-right"
+      data-aos-duration="1000"
+      className="card card-compact  bg-base-100 shadow-slate-500 shadow-2xl border p-4 transition duration-500 hover:scale-105 "
+    >
       <figure>
         <img src={image} alt="Shoes" />
       </figure>

@@ -1,11 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import 'animate.css';
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const { loginUser, googleSignIn, githubSignIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSingIn = (e) => {
     e.preventDefault();
@@ -78,12 +82,18 @@ const Login = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="password"
                 className="input input-bordered"
                 required
               />
+              <span
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-2 top-12"
+              >
+                {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+              </span>
             </div>
 
             <div className="form-control mt-6">

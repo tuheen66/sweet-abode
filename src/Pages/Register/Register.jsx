@@ -1,10 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import "animate.css";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -26,7 +30,6 @@ const Register = () => {
         })
           .then(() => console.log("Profile Updated"))
           .catch();
-
       })
       .catch((error) => console.error(error));
 
@@ -42,7 +45,7 @@ const Register = () => {
           </h1>
         </div>
         <div className="  shadow-2xl bg-base-200 w-full rounded-xl">
-          <form onSubmit={handleRegister} className="card-body ">
+          <form onSubmit={handleRegister} className="card-body py-2">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Your name</span>
@@ -83,12 +86,18 @@ const Register = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="password"
                 className="input input-bordered"
                 required
               />
+              <span
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-2 top-12"
+              >
+                {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+              </span>
             </div>
 
             <div className="form-control mt-6">
@@ -98,7 +107,7 @@ const Register = () => {
             </div>
           </form>
 
-          <div className="pb-8 mt-4 text-center">
+          <div className="pb-8 text-center">
             <p>
               Already have an account? Please{" "}
               <Link className="text-blue-500 font-bold" to="/login">

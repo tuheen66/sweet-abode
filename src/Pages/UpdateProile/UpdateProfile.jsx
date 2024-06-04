@@ -1,11 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const UpdateProfile = () => {
   const { user } = useContext(AuthContext);
 
-  console.log(user);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleUpdateUser = (e) => {
     e.preventDefault();
@@ -78,12 +79,18 @@ const UpdateProfile = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   placeholder="password"
                   className="input input-bordered"
                   required
                 />
+                <span
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-2 top-12"
+                >
+                  {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+                </span>
               </div>
               <div className="form-control mt-6">
                 <button className="btn bg-[#f0932b] text-white text-xl">
