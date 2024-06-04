@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import {
-//   GoogleAuthProvider,
+  //   GoogleAuthProvider,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import { createContext, useState } from "react";
 import auth from "../firebase/firebase.config";
@@ -19,9 +20,16 @@ const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  // login with email and password
+
+  const loginUser = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+
   const authInfo = {
     user,
     createUser,
+    loginUser,
   };
 
   return (
