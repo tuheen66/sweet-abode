@@ -1,12 +1,17 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import "animate.css";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import swal from "sweetalert";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+
+  const location = useLocation();
+
+  const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -20,9 +25,28 @@ const Register = () => {
 
     e.target.reset();
 
+    if (!/^(?=.*[a-z])(?=.*[A-Z]).{6}$/.test(password)) {
+      swal({
+        title: " Oops!",
+        text: " Your password must contain one Uppercase letter, one lowercase letter and should be at least 6 characters long",
+        icon: "error",
+        button: "oh no!",
+      });
+      return;
+    }
+
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+
+        swal({
+          title: "Success!",
+          text: "Your registration is successful",
+          icon: "success",
+          button: "oh yes!",
+        });
+
+        navigate(location?.state ? location.state : "/");
 
         updateProfile(result.user, {
           displayName: name,

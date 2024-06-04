@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import swal from "sweetalert";
+
 
 const UpdateProfile = () => {
   const { user } = useContext(AuthContext);
@@ -23,7 +25,14 @@ const UpdateProfile = () => {
       photoURL: photo,
     })
       .then(() => {
-        console.log("profile updated");
+       
+        swal({
+          title: "Success!",
+          text: "Your profile updated successfully",
+          icon: "success",
+          button: "oh yes!",
+        });
+        location.reload();
       })
       .catch();
   };
