@@ -4,7 +4,8 @@ import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Navbar = () => {
-  const { logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
 
   const handleSignOut = () => {
     logOut()
@@ -24,15 +25,31 @@ const Navbar = () => {
             <NavLink to="/update-profile">Update Profile</NavLink>
           </div>
         </div>
-        
+
+
         <div>
-          <Link to="/login">
-            <button className="btn bg-[#f0932b] text-white">Login</button>
-          </Link>
-          <button onClick={handleSignOut} className="btn bg-[#f0932b] text-white">
-          Logout
-        </button>
+          {user ? (
+            // setting username on hover of user image
+            <div className="flex items-center gap-4">
+              <div className=" relative group">
+                <img className="w-14 rounded-full  " src={user.photoURL} />
+
+                <p className="opacity-0 group-hover:opacity-100 absolute  right-14 flex items-center bottom-0 text-xl bg-gray-200 p-2 text-black font-semibold">
+                  {user.email}
+                </p>
+              </div>
+
+              <button onClick={handleSignOut} className="btn bg-[#f0932b] text-white">
+                Logout
+              </button>
+            </div>
+          ) : (
+            <Link to="/login">
+              <button className="btn bg-[#f0932b] text-white">Login</button>
+            </Link>
+          )}
         </div>
+
       </div>
     </div>
   );

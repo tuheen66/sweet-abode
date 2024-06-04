@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -13,9 +14,19 @@ const Register = () => {
     const photo = e.target.photo.value;
     const password = e.target.password.value;
 
+    e.target.reset();
+
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => console.log("Profile Updated"))
+          .catch();
+
       })
       .catch((error) => console.error(error));
 

@@ -11,6 +11,8 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    e.target.reset();
+
     console.log(email, password);
 
     // email and password sign in
@@ -45,7 +47,7 @@ const Login = () => {
   };
 
   return (
-    <div className="hero min-h-screen  lg:w-1/2 mx-auto bg-blue-200 mb-4 rounded-xl ">
+    <div className="hero  lg:w-1/2 mx-auto bg-blue-200 mb-4 rounded-xl ">
       <div className="hero-content flex-col w-full">
         <div className="text-center lg:text-left ">
           <h1 className="text-5xl font-bold animate__animated animate__rubberBand">
