@@ -14,13 +14,13 @@ import AuthProvider from "./providers/AuthProvider.jsx";
 import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage.jsx";
-
+import ExclusiveHouses from "./Pages/Exclusives/ExclusiveHouses.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -49,6 +49,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <UpdateProfile></UpdateProfile>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/exclusives",
+        element: (
+          <PrivateRoute>
+            <ExclusiveHouses></ExclusiveHouses>
           </PrivateRoute>
         ),
       },

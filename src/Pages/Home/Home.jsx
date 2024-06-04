@@ -4,6 +4,7 @@ import BannerSlider from "../../Components/BannerSlider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Helmet } from "react-helmet-async";
+import AboutUs from "../../Components/AboutUs";
 
 AOS.init();
 
@@ -29,6 +30,13 @@ const Home = () => {
         {properties.map((property) => (
           <PropertyCard key={property.id} property={property}></PropertyCard>
         ))}
+      </div>
+      <div data-aos="slide-right" data-aos-duration="1000">
+        <AboutUs></AboutUs>
+      </div>
+      <div>
+
+        
       </div>
     </div>
   );

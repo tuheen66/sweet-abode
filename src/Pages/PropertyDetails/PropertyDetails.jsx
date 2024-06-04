@@ -26,7 +26,7 @@ const PropertyDetails = () => {
       </Helmet>
       <div className="grid lg:grid-cols-5 gap-4">
         <div
-          data-aos="slide-down"
+          data-aos="slide-right"
           data-aos-duration="1000"
           className="lg:col-span-3 rounded-xl"
         >

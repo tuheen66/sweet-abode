@@ -23,9 +23,9 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
 
             <NavLink to="/update-profile">Update Profile</NavLink>
+            <NavLink to="/exclusives">Exclusive Houses</NavLink>
           </div>
         </div>
-
 
         <div>
           {user ? (
@@ -39,7 +39,10 @@ const Navbar = () => {
                 </p>
               </div>
 
-              <button onClick={handleSignOut} className="btn bg-[#f0932b] text-white">
+              <button
+                onClick={handleSignOut}
+                className="btn bg-[#f0932b] text-white"
+              >
                 Logout
               </button>
             </div>
@@ -49,7 +52,6 @@ const Navbar = () => {
             </Link>
           )}
         </div>
-
       </div>
     </div>
   );
