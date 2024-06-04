@@ -8,9 +8,9 @@ import Root from "./Root/Root.jsx";
 import Home from "./Pages/Home/Home.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import Register from "./Pages/Register/Register.jsx";
-import UpdateProfile from './Pages/UpdateProile/UpdateProfile';
+import UpdateProfile from "./Pages/UpdateProile/UpdateProfile";
 import PropertyDetails from "./Pages/PropertyDetails/PropertyDetails.jsx";
-
+import AuthProvider from "./providers/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,30 +23,30 @@ const router = createBrowserRouter([
         loader: () => fetch("./../public/residential.json"),
       },
       {
-        path:'/property-details/:id',
-        element:<PropertyDetails></PropertyDetails>,
-        loader:()=>fetch("../public/residential.json")
-
+        path: "/property-details/:id",
+        element: <PropertyDetails></PropertyDetails>,
+        loader: () => fetch("../public/residential.json"),
       },
       {
         path: "/login",
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: "/register",
-        element: <Register></Register>
+        element: <Register></Register>,
       },
       {
         path: "/update-profile",
-        element:<UpdateProfile></UpdateProfile>
+        element: <UpdateProfile></UpdateProfile>,
       },
-      
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
