@@ -8,6 +8,7 @@ import Root from "./Root/Root.jsx";
 import Home from "./Pages/Home/Home.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import Register from "./Pages/Register/Register.jsx";
+import UpdateProfile from './Pages/UpdateProile/UpdateProfile';
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/update-profile",
+        element:<UpdateProfile></UpdateProfile>
       },
       
     ],
