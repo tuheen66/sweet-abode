@@ -1,27 +1,29 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
-
 const PropertyDetails = () => {
-    const properties = useLoaderData();
-    const {id} = useParams()
+  const properties = useLoaderData();
+  const { id } = useParams();
 
-    const property = properties.find((property) => property.id == id);
+  const property = properties.find((property) => property.id == id);
 
-    const {
-        image,
-        estate_title,
-        segment_name,
-        price,
-        status,
-        area,
-        description,
-        location,
-        facilities,
-      } = property;
+  const {
+    image,
+    estate_title,
+    segment_name,
+    price,
+    status,
+    area,
+    description,
+    location,
+    facilities,
+  } = property;
 
-    return (
-        <div className="w-[90%] mx-auto mb-12">
-       
+  return (
+    <div className="w-[90%] mx-auto mb-12">
+      <Helmet>
+        <title>Sweet Abode | Property Details</title>
+      </Helmet>
       <div className="grid lg:grid-cols-5 gap-4">
         <div
           data-aos="slide-down"
@@ -75,7 +77,7 @@ const PropertyDetails = () => {
         </p>
       </div>
     </div>
-    );
+  );
 };
 
 export default PropertyDetails;

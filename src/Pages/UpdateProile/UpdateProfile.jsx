@@ -3,6 +3,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import swal from "sweetalert";
+import { Helmet } from "react-helmet-async";
 
 
 const UpdateProfile = () => {
@@ -39,6 +40,9 @@ const UpdateProfile = () => {
 
   return (
     <div className="grid grid-cols-2 w-[90%] mx-auto">
+      <Helmet>
+        <title>Sweet Abode | Update Profile</title>
+      </Helmet>
       <div className="hero min-h-screen bg-blue-200 mb-4 rounded-xl">
         <div className="hero-content flex-col w-full">
           <div className="text-center lg:text-left ">

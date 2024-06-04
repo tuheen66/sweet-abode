@@ -5,6 +5,7 @@ import { updateProfile } from "firebase/auth";
 import "animate.css";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import swal from "sweetalert";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -62,6 +63,9 @@ const Register = () => {
 
   return (
     <div className="hero min-h-screen  lg:w-1/2 mx-auto bg-blue-200 mb-4 rounded-xl">
+      <Helmet>
+        <title>Sweet Abode | Register</title>
+      </Helmet>
       <div className="hero-content flex-col w-full ">
         <div className="text-center lg:text-left ">
           <h1 className="text-5xl font-bold animate__animated animate__jello">

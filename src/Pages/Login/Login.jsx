@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import 'animate.css';
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { loginUser, googleSignIn, githubSignIn } = useContext(AuthContext);
@@ -56,6 +57,9 @@ const Login = () => {
 
   return (
     <div className="hero  lg:w-1/2 mx-auto bg-blue-200 mb-4 rounded-xl ">
+      <Helmet>
+        <title>Sweet Abode | Login</title>
+      </Helmet>
       <div className="hero-content flex-col w-full">
         <div className="text-center lg:text-left ">
           <h1 className="text-5xl font-bold animate__animated animate__rubberBand">

@@ -3,6 +3,7 @@ import PropertyCard from "../../Components/PropertyCard";
 import BannerSlider from "../../Components/BannerSlider";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet-async";
 
 AOS.init();
 
@@ -10,6 +11,10 @@ const Home = () => {
   const properties = useLoaderData();
   return (
     <div className="w-[90%] mx-auto">
+      <Helmet>
+        <title>Sweet Abode | Home</title>
+      </Helmet>
+
       <BannerSlider></BannerSlider>
 
       <h2 className="my-8 font-bold text-3xl text-center text-gray-700">
