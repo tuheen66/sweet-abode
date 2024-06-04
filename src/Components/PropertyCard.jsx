@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const PropertyCard = ({ property }) => {
   const {
@@ -5,7 +7,7 @@ const PropertyCard = ({ property }) => {
     image,
     estate_title,
     segment_name,
-    price, 
+    price,
     status,
     area,
     short_description,
@@ -47,9 +49,11 @@ const PropertyCard = ({ property }) => {
           ))}
         </ul>
         <div className="card-actions justify-end">
-          <button className="btn bg-[#f0932b] text-lg text-white">
-            View Property
-          </button>
+          <Link to={`property-details/${id}`}>
+            <button className="btn bg-[#f0932b] text-lg text-white">
+              View Property
+            </button>
+          </Link>
         </div>
       </div>
     </div>

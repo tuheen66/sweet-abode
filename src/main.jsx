@@ -9,6 +9,7 @@ import Home from "./Pages/Home/Home.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import Register from "./Pages/Register/Register.jsx";
 import UpdateProfile from './Pages/UpdateProile/UpdateProfile';
+import PropertyDetails from "./Pages/PropertyDetails/PropertyDetails.jsx";
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,12 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch("./../public/residential.json"),
+      },
+      {
+        path:'/property-details/:id',
+        element:<PropertyDetails></PropertyDetails>,
+        loader:()=>fetch("../public/residential.json")
+
       },
       {
         path: "/login",
