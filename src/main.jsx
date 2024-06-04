@@ -13,11 +13,14 @@ import PropertyDetails from "./Pages/PropertyDetails/PropertyDetails.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
 import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 import { HelmetProvider } from "react-helmet-async";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage.jsx";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

@@ -1,8 +1,18 @@
-# React + Vite
+Website name : Sweet Abode
+* The website is about various types of residential houses and apartments
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* Implemented Private Route to limit access to property details without login. Logged in users can visit property detail page to see the detail info of the property.
 
-Currently, two official plugins are available:
+* Implemented Profile Update for name and profile picture for logged in users only. logged in users can see their profile info in this page as well.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Implemented Email & password Authentication, Google sign In and Github Sign In
+
+* Implemented password verification during registration
+
+* Implemented dynamic title for each page.
+
+* Implemented npm package of 
+        i - AOS package - for Home page and property detail page
+        ii - Animate css - for Login and Register page titles
+        iii - Swiper Slider - for Home page banner-slider
+        iv - React-Leaflet - for Contact us map section
