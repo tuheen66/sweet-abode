@@ -13,8 +13,9 @@ import PropertyDetails from "./Pages/PropertyDetails/PropertyDetails.jsx";
 import AuthProvider from "./providers/AuthProvider.jsx";
 import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 import { HelmetProvider } from "react-helmet-async";
-import ErrorPage from "./Pages/ErrorPage/ErrorPage.jsx";
+
 import ExclusiveHouses from "./Pages/Exclusives/ExclusiveHouses.jsx";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("./../public/residential.json"),
+        loader: () => fetch("../residential.json"),
       },
       {
         path: "/property-details/:id",
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
             <PropertyDetails></PropertyDetails>
           </PrivateRoute>
         ),
-        loader: () => fetch("../public/residential.json"),
+        loader: () => fetch("../residential.json"),
       },
       {
         path: "/login",

@@ -1,4 +1,9 @@
 Website name : Sweet Abode
+
+Live link: https://sweet-abode.web.app/
+
+Main features:
+
 * The website is about various types of residential houses and apartments
 
 * Implemented Private Route to limit access to property details without login. Logged in users can visit property detail page to see the detail info of the property.
