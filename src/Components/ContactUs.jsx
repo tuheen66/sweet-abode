@@ -8,7 +8,7 @@ const ContactUs = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-8 my-12">
       <div className="lg:w-[50%] rounded-xl  shadow-2xl  shadow-slate-400 ">
-        <MapContainer center={position} zoom={5} scrollWheelZoom={true}>
+        <MapContainer center={position} zoom={5} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

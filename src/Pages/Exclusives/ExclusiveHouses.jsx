@@ -16,8 +16,24 @@ import img15 from "../../assets/houses/img15.jpg";
 import img16 from "../../assets/houses/img16.jpg";
 
 const ExclusiveHouses = () => {
-
-    const houses =[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16]
+  const houses = [
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    img10,
+    img11,
+    img12,
+    img13,
+    img14,
+    img15,
+    img16,
+  ];
   return (
     <div className="w-[90%] mx-auto">
       <h2 className="my-8 text-3xl font-bold text-center text-gray-700">
@@ -42,8 +58,15 @@ const ExclusiveHouses = () => {
         <img className="shadow-gray-300 shadow-xl rounded-lg" src={img16} alt="" />
       </div> */}
 
-      <div className=" grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-        {houses.map((house, idx)=><img key={idx} className="shadow-gray-300 shadow-xl rounded-lg" src={house} alt="" /> )}
+      <div className=" grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 ">
+        {houses.map((house, idx) => (
+          <img
+            key={idx}
+            className="shadow-gray-300 shadow-xl rounded-lg transition duration-500 hover:scale-150"
+            src={house}
+            alt=""
+          />
+        ))}
       </div>
     </div>
   );
