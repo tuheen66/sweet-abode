@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import 'animate.css';
+import "animate.css";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 
@@ -39,6 +39,8 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -49,6 +51,8 @@ const Login = () => {
     githubSignIn()
       .then((result) => {
         console.log(result.user);
+
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
